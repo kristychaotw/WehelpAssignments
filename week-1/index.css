@@ -1,0 +1,134 @@
+ul,li,a,header,nav,body,section,div,h1,h2,h3,h4,h5,h6,img{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+/*1rem設定-root em位置是html*/
+html{
+    font-size: 20px;
+}
+
+.container{
+    width: 90%;
+    margin:auto;
+}
+
+header{
+    padding:0 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(207, 207, 207);
+}
+
+.webname{
+    line-height: 48px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav{
+    display: none;
+}
+
+.manu-icon{
+    line-height: 48px;
+}
+
+
+.banner{
+    background-color: rgba(250, 128, 114, 0.705);
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    font-weight: 800;
+    font-size: 2rem;
+    /* font-size: 40px; */
+}
+
+.boxgroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    text-align: center;
+    background-color: rgb(121, 117, 117);
+    margin-top:20px;
+}
+
+/*600px以下*/
+.col-12{
+    width: 100%;
+}
+
+.pic{
+    width: 100%;
+    padding-bottom: 66.65%;
+    background-image: url(images/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt{
+    width: 100%;
+    background-color: rgb(255, 188, 161);
+    padding:20px 0;
+}
+
+
+
+
+/*600-1200px*/
+@media screen and (min-width: 600px){
+    .col-md-6{
+        width: 49%;
+    }
+    .menu-icon{
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li{
+        list-style: none;
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: darkgrey;
+        line-height: 48px;
+        padding: 0 10px;
+    }
+}
+
+
+/*1200px以上*/
+@media screen and (min-width: 1200px) {
+    .col-lg-3{
+        width: 24%;
+    }
+
+    .boxgroup{
+        max-width: 1200px;
+        justify-content: space-around;
+        margin:auto;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+   
+}
