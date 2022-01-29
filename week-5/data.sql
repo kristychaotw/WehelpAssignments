@@ -32,7 +32,7 @@ CREATE TABLE `member` (
   `follower_count` int NOT NULL DEFAULT '0',
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'test2','test','test',0,'2022-01-27 16:52:45'),(2,'BB','bb','1234',0,'2022-01-27 16:53:39'),(3,'CC','cc','5678',200,'2022-01-27 16:53:54'),(4,'DD','dd','0000',0,'2022-01-27 16:54:17'),(5,'EE','ee','1200',0,'2022-01-27 16:54:34');
+INSERT INTO `member` VALUES (1,'test2','test','test',0,'2022-01-27 16:52:45'),(2,'BB','bb','1234',0,'2022-01-27 16:53:39'),(3,'CC','cc','5678',200,'2022-01-27 16:53:54'),(4,'DD','dd','0000',0,'2022-01-27 16:54:17'),(5,'EE','ee','1200',0,'2022-01-27 16:54:34'),(6,'test2','test','test',0,'2022-01-29 23:37:06'),(7,'BB','bb','1234',0,'2022-01-29 23:37:27'),(8,'CC','cc','5678',200,'2022-01-29 23:37:29'),(9,'DD','dd','0000',0,'2022-01-29 23:37:32'),(10,'EE','ee','1200',0,'2022-01-29 23:37:33');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-29 23:09:35
+-- Dump completed on 2022-01-30  0:24:46
