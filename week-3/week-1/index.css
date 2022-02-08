@@ -4,8 +4,6 @@ ul,li,a,header,nav,body,section,div,h1,h2,h3,h4,h5,h6,img{
 }
 
 
-
-
 /*1rem設定-root em位置是html*/
 html{
     font-size: 20px;
@@ -60,6 +58,28 @@ nav{
     margin-top:20px;
 }
 
+.btn{
+    text-align: center;
+}
+
+button{
+    margin:80px auto;
+    padding:10px 40px;
+    border: 2px solid salmon;
+    border-radius: 50px;
+    background-color: rgb(255, 240, 240);
+    color:salmon;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    transition: all .7s;
+}
+
+
+.btn :hover{
+    background-color: salmon;
+    color:seashell;
+}
+
 /*600px以下*/
 .col-12{
     width: 100%;
@@ -75,7 +95,7 @@ nav{
 
 .txt{
     width: 100%;
-    background-color: rgb(255, 188, 161);
+    background-color: rgb(255, 212, 208);
     padding:20px 0;
 }
 
@@ -128,6 +148,7 @@ nav{
 
     .container{
         width: 100%;
+        max-width: 1440px;
     }
 
    
