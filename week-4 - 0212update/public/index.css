@@ -1,0 +1,41 @@
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    margin:auto;
+    width: 50%;
+    text-align: center;
+}
+h2{
+    margin:0;
+    padding:10px;
+    font-weight: 700;
+    color:white;
+    background-color: rgb(30, 38, 53);   
+}
+
+h3{
+    line-height: 1.5rem;
+}
+
+form{
+    border: 2px solid rgb(30, 38, 53);
+    margin:auto;
+    padding:0;
+}
+
+.box{
+    border: 2px solid rgb(30, 38, 53);
+    padding:0 0 20px 0;
+}
+
+input{
+    margin:5px;
+}
+
+button{
+    margin:20px;
+}
