@@ -9,47 +9,49 @@ fetch(src).then(function (response) {
 
 
 
-// 取得 data 中 標題和第一張圖片
-let title=[];
-let spotimg=[]
-let newspotimg=[]
-for (p=0;p<data.length;p++){
+    // 取得 data 中 標題和第一張圖片
+    let title = [];
+    let spotimg = []
+    let newspotimg = []
+    for (p = 0; p < data.length; p++) {
         title[p] = data[p].stitle;
-        spotimg[p] =data[p].file;
-        newspotimg[p]=spotimg[p].split("http").map(x => { return "http"+x }).slice(1)
+        spotimg[p] = data[p].file;
+        newspotimg[p] = spotimg[p].split("http").map(x => {
+            return "http" + x
+        }).slice(1)
     }
-    console.log("景點名稱:",title, "景點圖片url:",newspotimg);
-    
+    console.log("景點名稱:", title, "景點圖片url:", newspotimg);
+
     // 換掉 html 中的標題和圖片
-    
-    for(num=1;num<=8;num++){  
-            let newbox = document.createElement("newbox" + num);
-            let newcontent = document.createTextNode(title[num - 1]);
-            newbox.appendChild(newcontent);
-            document.getElementById("txt" + num).appendChild(newbox);
-            document.getElementById("pic"+num).style.backgroundImage="url("+newspotimg[(num-1)][0]+")"; 
-        }
-        
-    })
+
+    for (num = 1; num <= 8; num++) {
+        let newbox = document.createElement("newbox" + num);
+        let newcontent = document.createTextNode(title[num - 1]);
+        newbox.appendChild(newcontent);
+        document.getElementById("txt" + num).appendChild(newbox);
+        document.getElementById("pic" + num).style.backgroundImage = "url(" + newspotimg[(num - 1)][0] + ")";
+    }
+
+})
 
 let c = 0;
-let loadmore = function(){
+let loadmore = function () {
     // 做8個div
     let addgroup = document.getElementById("groupdiv").cloneNode(true);
     document.getElementById("list").appendChild(addgroup);
-    
+
     // 換掉8個div內的內容
     // c++;
     // console.log("按了幾次按鈕:",c);
     // document.getElementById("pic"+c*8).style.backgroundImage="url("+newspotimg[(c*8-1)][0]+")";
-    
-    
+
+
 } // loadmore end
 
 
 
-let btn=document.getElementById("btnload");
-btn.addEventListener("click",loadmore);
+let btn = document.getElementById("btnload");
+btn.addEventListener("click", loadmore);
 
 
 
@@ -67,7 +69,7 @@ btn.addEventListener("click",loadmore);
 // 換圖片標題
 // title = []
 // for (let i = 0; i < data.length; i++) {
-    //     title[i] = data[i].stitle
+//     title[i] = data[i].stitle
 // }
 // console.log(title, typeof [title]);
 
@@ -105,7 +107,7 @@ btn.addEventListener("click",loadmore);
 //         link=newspotimg[i][0]
 //     }
 //     console.log(link);
-    
+
 
 //     function changeImg(num) {
 //         document.getElementById("pic"+num).style.backgroundImage="url("+newspotimg[(num-1)][0]+")";
