@@ -138,7 +138,7 @@ def signIn():
             if p[0] == userlogin and p[1] ==psdlogin:
                 print("帳密符合")
                 session["user"]=userlogin
-                result=redirect("/member?name="+userlogin)
+                result=redirect("/member")
                 break
         
             else:
@@ -217,7 +217,7 @@ def handleMember():
     if "user" not in session:
         return redirect("/")
     else:
-        name=request.args.get("name","")
+        name=session["user"]
         return render_template("member.html",name=name)
 
 # 建立路徑 "/signout" 對應的處理函式
