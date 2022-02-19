@@ -16,9 +16,16 @@
     </div>
     <div class="container">
         <div class="formstyle">
-            <p>{{ name }}，歡迎登入會員頁。</p>
+            <p>{{ name }}，歡迎登入系統。</p>
             <button><a href="/signout">登出系統</a></button>
         </div>
+        <div class="checkMember">
+            <h4>查詢會員姓名</h4>
+            <input type="text" name="keyinName" id="kName">
+            <button type="button" id="btn">搜尋</button>
+            <div class="showHere"></div>
+        </div>
     </div>
+    <script src="../showAPI.js"></script>
 </body>
 </html>
