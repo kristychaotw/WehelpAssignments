@@ -152,6 +152,7 @@ def handleSignOut():
 @app.route("/api/members")
 def membersApi():
     
+    mycursor = mydb.cursor(buffered =True )
     keyinName=request.args.get("username","None")
     print("username:", keyinName, "type:",type(keyinName)) #拿到字串
     target2="SELECT id, name, user FROM Member WHERE user = %s"

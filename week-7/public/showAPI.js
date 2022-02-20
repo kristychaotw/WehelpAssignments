@@ -10,9 +10,13 @@ let fetchData = function(){
         return response.json();
     }).then(function(result){
         console.log("最終的資料:",result,typeof(result));
-        console.log("name:", result.data.name);
         showHere = document.querySelector(".showHere")
-        showHere.innerHTML="他的名字是:"+result.data.name
+        if (result.data != null){
+            console.log("name:", result.data.name);
+            showHere.innerHTML="他的名字是:"+result.data.name
+        }else{
+            showHere.innerHTML="沒有這個人"
+        }
     });
 
 }
